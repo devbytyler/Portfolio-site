@@ -22,3 +22,26 @@ Things you may want to cover:
 * Deployment instructions
 
 * ...
+
+> this i a ruby on rails5 applicaton tht allows user to creat their pwn portfolios.
+
+### Feautes
+
+- Real time chat engin for commetns
+- blog portfolio
+- drag and drop inerface
+
+### Code Example
+
+```ruby
+def my_great_method
+  puts "here it is"
+end
+```
+
+```javascript
+alert('Hi there');
+```
+
+
+
