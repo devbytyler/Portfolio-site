@@ -8,6 +8,23 @@ body
 {
   margin: 30px;
   font-family: Verdana, sans-serif;
-  background-image: url('http://africageographic.com/wp-content/uploads/2016/09/grey-repeating-background-5.jpg');
+  background-image: url('http://2.bp.blogspot.com/-bj1_grGf7_Q/Uj73xuJ7iaI/AAAAAAAAF2c/HGqX5aUOVjQ/s1600/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
   color: black;
+  background-attachment: fixed;
+}
+
+h1 {
+  background-color: rgba(50,50,125,0.6);
+  color: white ;
+  padding: 10px;
+}
+
+img {
+  border: 2px black solid;
+}
+
+a:hover {
+  color: white;
 }
