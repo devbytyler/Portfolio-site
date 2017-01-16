@@ -29,7 +29,7 @@ class BlogsController < ApplicationController
 
     respond_to do |format|
       if @blog.save
-        format.html { redirect_to @blog, notice: 'Bro! You made a blog post!!!' }
+        format.html { redirect_to @blog, notice: 'Blog post created' }
       else
         format.html { render :new }
       end
