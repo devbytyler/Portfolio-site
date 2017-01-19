@@ -13,3 +13,24 @@
  *= require_tree .
  *= require_self
  */
+
+#navbar{
+  background-color: rgba(100, 100, 100, 0.95);
+  height: 30px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  margin-left: -30px;
+  padding: 10px;
+  border-bottom: 4px solid white;
+}
+
+body{
+  position: relative;
+  padding-top: 30px;
+}
+
+#nav{
+  float: right;
+  margin-right: 20px;
+}
