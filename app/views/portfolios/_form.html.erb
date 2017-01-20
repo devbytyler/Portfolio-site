@@ -1,6 +1,7 @@
-<%= form_for(@portfolio_item) do |f| %>
 
-  <div class="field">
+
+<%= form_for @portfolio_item do |f| %>
+<div class="field">
     <%= f.label :title %>
     <%= f.text_field :title %>
   </div>
@@ -25,10 +26,18 @@
     <%= f.text_area :main_image %>
   </div>
 
+  <ul>
+    <%= f.fields_for :technologies do |tech_form| %>
+      <li>
+        <%= tech_form.label :name %>
+        <%= tech_form.text_field :name %>
+      </li>
+    <% end %>
+  </ul>
+
 
   <div class="actions">
     <%= f.submit %>
   </div>
 
-
-<% end %>
+  <% end %>
