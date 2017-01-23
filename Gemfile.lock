@@ -1,3 +1,9 @@
+GIT
+  remote: https://github.com/tylerstephens814/stephens_view_tool
+  revision: 25125c4daba2ee275f760fe9c16b548b6105c433
+  specs:
+    stephens_view_tool (0.1.0)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -187,6 +193,7 @@ DEPENDENCIES
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)
+  stephens_view_tool!
   turbolinks (~> 5)
   tzinfo-data
   uglifier (>= 1.3.0)
