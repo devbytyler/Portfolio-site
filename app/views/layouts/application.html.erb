@@ -8,8 +8,6 @@
 
     <meta name = "keywords" content="<%= @seo_keywords %>" />
 
-
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
@@ -25,20 +23,15 @@
         <div class="cover-container">
 
           <%= render "shared/application_nav" %>
-
-          <%= login_helper %>
           
           <%= yield %>
 
-          <%= copyright_generator %>
+          <%= render "shared/application_footer" %>
 
           <%= source_helper("application") %>
 
         </div>
-
       </div>
-
     </div>
-
   </body>
 </html>
