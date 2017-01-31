@@ -23,54 +23,54 @@ class PortfoliosController < ApplicationController
     @angular_portfolio_items = Portfolio.angular
   end
       
-    def create
-    @portfolio_item = Portfolio.new(portfolio_params)
+  def create
+  @portfolio_item = Portfolio.new(portfolio_params)
 
-      respond_to do |format|
-        if @portfolio_item.save
-          format.html { redirect_to portfolio_show_path(@portfolio_item), notice: 'your portfolio is now live' }
-        else
-          format.html { render :new } 
-        end
-      end
-    end
-
-    def show
-      @portfolio_item = Portfolio.find(params[:id])
-    end
-
-    def edit
-        @portfolio_item = Portfolio.find(params[:id])
-    end
-
-    def update
-      @portfolio_item = Portfolio.find(params[:id])
-      if @portfolio_item.update(portfolio_params)
-        redirect_to portfolio_show_path(@portfolio_item)
+    respond_to do |format|
+      if @portfolio_item.save
+        format.html { redirect_to portfolio_show_path(@portfolio_item), notice: 'your portfolio is now live' }
       else
-        render :edit
+        format.html { render :new } 
       end
     end
+  end
 
-    def destroy
+  def show
+    @portfolio_item = Portfolio.find(params[:id])
+  end
+
+  def edit
       @portfolio_item = Portfolio.find(params[:id])
-      @portfolio_item.destroy
-      redirect_to portfolios_path
-    end
+  end
 
-    private
-
-    def portfolio_params
-      params.require(:portfolio).permit(:title, 
-                                        :subtitle, 
-                                        :body, 
-                                        :thumb_image, 
-                                        :main_image, 
-                                        technologies_attributes: [:id, :name, :_destroy])
+  def update
+    @portfolio_item = Portfolio.find(params[:id])
+    if @portfolio_item.update(portfolio_params)
+      redirect_to portfolio_show_path(@portfolio_item)
+    else
+      render :edit
     end
+  end
 
-    def set_portfolio_item
-      @portfolio_item = Portfolio.find(params[:id])
-    end
+  def destroy
+    @portfolio_item = Portfolio.find(params[:id])
+    @portfolio_item.destroy
+    redirect_to portfolios_path
+  end
+
+  private
+
+  def portfolio_params
+    params.require(:portfolio).permit(:title, 
+                                      :subtitle, 
+                                      :body, 
+                                      :thumb_image, 
+                                      :main_image, 
+                                      technologies_attributes: [:id, :name, :_destroy])
+  end
+
+  def set_portfolio_item
+    @portfolio_item = Portfolio.find(params[:id])
+  end
 
 end
