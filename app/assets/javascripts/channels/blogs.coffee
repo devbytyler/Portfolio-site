@@ -7,7 +7,7 @@ jQuery(document).on 'turbolinks:load', ->
     },
     connected: ->
     disconnected: ->
-    recieved: (data) ->
+    received: (data) ->
       comments.append data['comment']
     send_comment: (comment, blog_id) ->
       @perform 'send_comment', comment: comment, blog_id: blog_id
@@ -19,4 +19,4 @@ jQuery(document).on 'turbolinks:load', ->
       comments.data('blog-id')
       textarea.val('')
     e.preventDefault()
-      return false
+    return false
