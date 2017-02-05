@@ -1,5 +1,5 @@
 class Blog < ApplicationRecord
-  enum status: {Draft: 0, Published: 1}
+  enum status: {draft: 0, published: 1}
   extend FriendlyId
   friendly_id :title, use: :slugged
 
@@ -9,8 +9,9 @@ class Blog < ApplicationRecord
 
   has_many :comments, dependent: :destroy
 
+  def self.recent
+    order("created_at DESC")
+  end
+
 end
 
-
-
-#MVC -Model view controller

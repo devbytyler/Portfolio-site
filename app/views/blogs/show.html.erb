@@ -2,11 +2,11 @@
 
   <h2><%= @blog.title %></h2>
 
-  <%= link_to 'Edit |', edit_blog_path(@blog) if logged_in?(:site_admin) %>
-  <%= link_to 'Back', blogs_path %>
+  <%= link_to action_icon_helper("edit"), edit_blog_path(@blog) if logged_in?(:site_admin) %>
+  <%= link_to action_icon_helper("back"), blogs_path %>
 
   <p>
-   <%= @blog.body %>
+   <%= markdown @blog.body %>
   </p>
 
   <%= render 'comments/comment_form' %>
