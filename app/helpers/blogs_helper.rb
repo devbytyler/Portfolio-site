@@ -9,16 +9,15 @@ module BlogsHelper
     when "published" then '<i class="fa fa-eye" aria-hidden="true"></i>'.html_safe
     when "edit" then '<i class="fa fa-pencil-square-o" aria-hidden="true"></i>'.html_safe
     when "delete" then '<i class="fa fa-trash-o" aria-hidden="true"></i>'.html_safe
-    when "back" then '<i class="fa fa-undo" aria-hidden="true"></i>'.html_safe
     else action
     end
   end
 
   class CodeRayify < Redcarpet::Render::HTML
-   def block_code(code, language)
-     CodeRay.scan(code,language).div
-   end
- end
+    def block_code(code, language)
+      CodeRay.scan(code,language).div
+    end
+  end
 
  def markdown(text)
    coderayified = CodeRayify.new(filter_html: true, hard_wrap: true)

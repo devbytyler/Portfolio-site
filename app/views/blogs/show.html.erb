@@ -5,7 +5,7 @@
   <p><%= @blog.topic.title %></p>
 
   <%= link_to action_icon_helper("edit"), edit_blog_path(@blog) if logged_in?(:site_admin) %>
-  <%= link_to action_icon_helper("back"), blogs_path %>
+  <%= link_to 'Back', blogs_path %>
 
   <p>
    <%= markdown @blog.body %>
