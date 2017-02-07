@@ -232,7 +232,22 @@ body {
   border: 1pt red solid;
 }
 
-  
+.app-card-container{
+  color: black;
+  text-align: left;
+}
+
+.app-card-container > .card{
+  padding: 40px;
+}
+
+.profile-img{
+  border: 1px solid grey;
+}
+
+.app-card-container a {
+  color: red;
+}
 
 
 
