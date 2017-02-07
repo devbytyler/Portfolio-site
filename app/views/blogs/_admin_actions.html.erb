@@ -1,0 +1,7 @@
+<% if logged_in?(:site_admin) %>
+  <nav class="breadcrumb blogcrumb">
+    <%= link_to action_icon_helper(blog.status), toggle_status_blog_path(blog), style: blog_status_color(blog) %> /
+    <%= link_to action_icon_helper("edit"), edit_blog_path(blog) %> /
+    <%= link_to action_icon_helper("delete"), blog, method: :delete, data: { confirm: 'Are you sure?' }%>
+  </nav>
+<%end%>
