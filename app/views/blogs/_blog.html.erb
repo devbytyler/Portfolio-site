@@ -5,7 +5,8 @@
   <%= render partial: 'blogs/admin_actions', locals: {blog: blog} %>
  
   <p>
-    <%= markdown blog.body %>
+    <%= markdown(blog.body.truncate(350)) %>
+    <%= link_to 'Read More  ' '<i class="fa fa-chevron-circle-down" aria-hidden="true"></i>'.html_safe, blog %></td>
   </p>
 </div>
 
