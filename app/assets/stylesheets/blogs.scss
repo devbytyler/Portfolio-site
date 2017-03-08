@@ -13,7 +13,7 @@
 }
 
 body {
-  font-family: 'Droid Serif', serif;
+  font-family: 'Ubuntu', sans-serif;
   color: #555;
 }
 
@@ -23,8 +23,7 @@ h3, .h3,
 h4, .h4,
 h5, .h5,
 h6, .h6 {
-  font-family: 'Francois One', sans-serif;
-  font-weight: normal;
+  font-family: 'Ubuntu', sans-serif;
   color: #333;
 }
 
@@ -66,18 +65,21 @@ h6, .h6 {
 .nav-link.active {
   color: #fff;
 }
-.nav-link.active:after {
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  width: 0;
-  height: 0;
-  margin-left: -.3rem;
-  vertical-align: middle;
-  content: "";
-  border-right: .3rem solid transparent;
-  border-bottom: .3rem solid;
-  border-left: .3rem solid transparent;
+
+@media (min-width: 62em) {
+  .nav-link.active:after {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0;
+    height: 0;
+    margin-left: -.3rem;
+    vertical-align: middle;
+    content: "";
+    border-right: .3rem solid transparent;
+    border-bottom: .3rem solid;
+    border-left: .3rem solid transparent;
+  }
 }
 
 
@@ -200,5 +202,9 @@ h6, .h6 {
 
 .blog-sidebar-source{
   margin-top: 20px;
+}
+
+.blog-nav {
+  margin-bottom: 30px;
 }
 
