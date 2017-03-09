@@ -32,12 +32,14 @@ a:hover {
 html,
 body {
   height: 100%;
+  zoom: 90%;
 }
 body {
   color: #fff;
   text-align: center;
   // text-shadow: 0 .05rem .1rem rgba(0,0,0,.5);
   font-family: 'Ubuntu', sans-serif;
+
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -215,7 +217,7 @@ body {
 
 @media (max-width: 55em) {
   #background {
-    display: none;
+    visibility: hidden;
     autoplay: false;
   }
   .site-wrapper {
@@ -231,6 +233,7 @@ body {
 
 .app-footer{
   color: white;
+  margin-top: 20px;
 }
 
 
@@ -250,7 +253,9 @@ body {
 
 .app-card-container{
   color: black;
-  text-align: left;
+  text-align: left;  
+  margin-top: 80px;
+  margin-top: 10px;
 }
 
 .app-card-container > .card{
