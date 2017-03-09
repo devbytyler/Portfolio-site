@@ -220,9 +220,12 @@ body {
   }
   .site-wrapper {
     // background: image-url('Lonely-Chair.jpg') no-repeat ;
-    background-position: center;
+    // background-position: center;
+    background: image-url('gradient.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
     background-size: cover; 
-    background: image-url('gradient.jpg') no-repeat ;
   }
 }
 
