@@ -215,7 +215,7 @@ body {
 
 @media (max-width: 55em) {
   #background {
-    visibility: hidden;
+    display: false;
     autoplay: false;
   }
   .site-wrapper {
