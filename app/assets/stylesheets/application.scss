@@ -216,12 +216,13 @@ body {
 @media (max-width: 55em) {
   #background {
     visibility: hidden;
+    autoplay: false;
   }
   .site-wrapper {
     // background: image-url('Lonely-Chair.jpg') no-repeat ;
-    // background-position: center;
-    background-color: rgba(0,0,0, 1);
-
+    background-position: center;
+    background-size: cover; 
+    background: image-url('gradient.jpg') no-repeat ;
   }
 }
 
