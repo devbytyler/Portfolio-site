@@ -211,25 +211,10 @@ body {
   z-index: -100;
   -webkit-transform: translateX(-50%) translateY(-50%);
   transform: translateX(-50%) translateY(-50%);
-  background: image-url('Lonely-Chair.jpg') no-repeat;
+  background: image-url('bridge.jpg') no-repeat;
   background-size: cover;
 }
 
-@media (max-width: 55em) {
-  #background {
-    visibility: hidden;
-    autoplay: false;
-  }
-  .site-wrapper {
-    // background: image-url('Lonely-Chair.jpg') no-repeat ;
-    // background-position: center;
-    background: image-url('gradient.jpg') no-repeat center center fixed;
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover; 
-  }
-}
 
 .app-footer{
   color: white;
@@ -271,15 +256,33 @@ body {
 }
 
 .cover-heading {
-  font-family: 'Rubik Mono One', sans-serif;
+  font-family: 'Ubuntu', sans-serif;
   font-size: 4em;
+  color: black;
 }
 
-.intro{
-  margin-right: auto;
-  margin-left: auto;
-  max-width: 80%; 
-  font-size: 1.8em;
+.intro{ 
+  color: black;
+  font-size: 2em;
+  margin-top: 48px;
+  margin-left: 2em;
+  text-align: left;
+}
+
+@media (max-width: 62em) {
+  .intro {
+    margin: 0 auto 1em;
+    text-align: center;
+  }
+}
+
+.main-card{
+  padding: 3em;
+  .btn-primary{
+    background: #655795;
+    border-color: #655795;
+    margin: 0 auto;
+  }
 }
 
 hr{
